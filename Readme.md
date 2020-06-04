@@ -1,7 +1,7 @@
 # Личный проект «Кексобукинг» [![Build status][travis-image]][travis-url]
 
 * Студент: [Павел  Лыгорев](https://up.htmlacademy.ru/javascript/20/user/874017).
-* Наставник: `Неизвестно`.
+* Наставник: `Кексобот`.
 
 ---
 
