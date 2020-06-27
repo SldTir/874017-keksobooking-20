@@ -6,7 +6,7 @@
   };
 
   var save = function (data, onLoad, onError) {
-    var URL = 'https://javascript.pages.academy/keksobooking/data';
+    var URL = 'https://javascript.pages.academy/keksobooking';
     var xhr = new XMLHttpRequest();
     xhr.responseType = 'json';
 
