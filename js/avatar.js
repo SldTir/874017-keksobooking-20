@@ -28,7 +28,7 @@
   var imageHousing = function (evt) {
     var file = evt.target.files[0];
     var fileName = file.name.toLowerCase();
-    var elementImg = previewUser.cloneNode(true)
+    var elementImg = previewUser.cloneNode(true);
     previewHousing.appendChild(elementImg);
 
     var matches = FILE_TYPES.some(function (it) {
