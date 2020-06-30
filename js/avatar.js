@@ -7,7 +7,7 @@
   var fileHousing = document.querySelector('.ad-form__input');
   var photoContainer = document.querySelector('.ad-form__photo-container');
 
-  var userAvatar = function (evt) {
+  var downloadUserAvatar = function (evt) {
     var file = evt.target.files[0];
     var fileName = file.name.toLowerCase();
 
@@ -25,7 +25,7 @@
     }
   };
 
-  var imageHousing = function (evt) {
+  var downloadImageHousing = function (evt) {
     var previewHousing = document.querySelector('.ad-form__photo');
     if (!previewHousing.firstChild) {
       previewHousing.remove();
@@ -54,6 +54,6 @@
     }
   };
 
-  fileChooser.addEventListener('change', userAvatar);
-  fileHousing.addEventListener('change', imageHousing);
+  fileChooser.addEventListener('change', downloadUserAvatar);
+  fileHousing.addEventListener('change', downloadImageHousing);
 })();

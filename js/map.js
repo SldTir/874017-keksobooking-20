@@ -45,7 +45,8 @@
 
   var enableAddressInput = function () {
     var left = parseInt(mapPinMain.style.left, 10) + MainPinSize.WIDTH / 2;
-    var top = parseInt(mapPinMain.style.top, 10) - (MainPinSize.HEIGHT + MainPinSize.TIP_HEIGHT);
+    // debugger;
+    var top = parseInt(mapPinMain.style.top, 10) + (MainPinSize.HEIGHT + MainPinSize.TIP_HEIGHT);
     addressInput.setAttribute('value', Math.floor(left) + ', ' + Math.floor(top));
     addressInput.setAttribute('readonly', '');
   };
