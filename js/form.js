@@ -97,7 +97,7 @@
     priceInput.setAttribute('placeholder', price);
   });
 
-  var removeContainerImg = function ()  {
+  var removeContainerImg = function () {
     var containersImg = photoContainer.querySelectorAll('.ad-form__photo');
     containersImg.forEach(function (element) {
       element.remove();
@@ -105,8 +105,8 @@
     var templateImage = document.createElement('div');
     templateImage.setAttribute('class', 'ad-form__photo');
     photoContainer.appendChild(templateImage);
-  }
-  
+  };
+
   var selectOption = typeSelect.querySelector('[selected]');
   priceInput.setAttribute('min', Price[selectOption.value.toUpperCase()]);
   priceInput.setAttribute('placeholder', Price[selectOption.value.toUpperCase()]);
