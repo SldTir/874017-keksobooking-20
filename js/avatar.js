@@ -4,8 +4,8 @@
 
   var fileChooser = document.querySelector('.ad-form-header__input');
   var previewUser = document.querySelector('.ad-form-header__preview').querySelector('img');
-  var previewHousing = document.querySelector('.ad-form__photo');
   var fileHousing = document.querySelector('.ad-form__input');
+  var photoContainer = document.querySelector('.ad-form__photo-container');
 
   var userAvatar = function (evt) {
     var file = evt.target.files[0];
@@ -26,10 +26,19 @@
   };
 
   var imageHousing = function (evt) {
+    var previewHousing = document.querySelector('.ad-form__photo');
+    if (!previewHousing.firstChild) {
+      previewHousing.remove();
+    }
     var file = evt.target.files[0];
     var fileName = file.name.toLowerCase();
     var elementImg = previewUser.cloneNode(true);
-    previewHousing.appendChild(elementImg);
+    elementImg.setAttribute('width', '70px');
+    elementImg.setAttribute('height', '70px');
+    var imgContainer = document.createElement('div');
+    imgContainer.setAttribute('class', 'ad-form__photo');
+    imgContainer.appendChild(elementImg);
+    photoContainer.appendChild(imgContainer);
 
     var matches = FILE_TYPES.some(function (it) {
       return fileName.endsWith(it);

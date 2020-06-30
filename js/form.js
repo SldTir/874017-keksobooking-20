@@ -33,6 +33,7 @@
   var formPreview = document.querySelector('.ad-form-header__preview').querySelector('img');
   var inputPhoto = document.querySelector('.ad-form__upload').querySelector('input');
   var formPhoto = document.querySelector('.ad-form__photo');
+  var photoContainer = document.querySelector('.ad-form__photo-container');
 
   titleInput.addEventListener('invalid', function () {
     titleInput.setAttribute('style', 'border: 2px solid red');
@@ -96,6 +97,16 @@
     priceInput.setAttribute('placeholder', price);
   });
 
+  var removeContainerImg = function ()  {
+    var containersImg = photoContainer.querySelectorAll('.ad-form__photo');
+    containersImg.forEach(function (element) {
+      element.remove();
+    });
+    var templateImage = document.createElement('div');
+    templateImage.setAttribute('class', 'ad-form__photo');
+    photoContainer.appendChild(templateImage);
+  }
+  
   var selectOption = typeSelect.querySelector('[selected]');
   priceInput.setAttribute('min', Price[selectOption.value.toUpperCase()]);
   priceInput.setAttribute('placeholder', Price[selectOption.value.toUpperCase()]);
@@ -126,6 +137,7 @@
     titleInput.removeAttribute('style');
     priceInput.removeAttribute('style');
     validateRoomCapacity(capacityInput.querySelector('[value="1"]').value);
+    removeContainerImg();
   };
 
   window.form = {
