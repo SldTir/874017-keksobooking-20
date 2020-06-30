@@ -82,7 +82,7 @@
     buttonPublish.removeAttribute('disabled', '');
     descriptionTextarea.removeAttribute('disabled', '');
     mapFiltersElement.removeAttribute('disabled', '');
-    map.classList.remove('map--faded');  
+    map.classList.remove('map--faded');
   };
 
   mapPinMain.addEventListener('keydown', function (evt) {
