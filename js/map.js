@@ -24,8 +24,8 @@
   var disableAddressInput = function () {
     mapPinMain.style.left = PIN_LOCATION_X + 'px';
     mapPinMain.style.top = PIN_LOCATION_Y + 'px';
-    var left = PIN_LOCATION_X - MainPinSize.WIDTH / 2;
-    var top = PIN_LOCATION_Y - MainPinSize.HEIGHT / 2;
+    var left = PIN_LOCATION_X + MainPinSize.WIDTH / 2;
+    var top = PIN_LOCATION_Y + MainPinSize.HEIGHT / 2;
     addressInput.setAttribute('value', Math.floor(left) + ', ' + Math.floor(top));
   };
 
