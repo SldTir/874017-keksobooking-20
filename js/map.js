@@ -83,7 +83,7 @@
     descriptionTextarea.removeAttribute('disabled', '');
     mapFiltersElement.removeAttribute('disabled', '');
     map.classList.remove('map--faded');
-  };  
+  };
 
   mapPinMain.addEventListener('keydown', function (evt) {
     if (window.utils.isEnterPressed(evt.key)) {
