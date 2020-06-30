@@ -25,9 +25,8 @@
   };
 
   var createPins = function (offers) {
-    console.log(offers);
     var fragment = document.createDocumentFragment();
-    offers.slice().forEach(function (offer) {
+    offers.slice(Length.MIN, Length.MAX).forEach(function (offer) {
       var x = offer.location.x - PinSize.WIDTH / 2;
       var y = offer.location.y - PinSize.HEIGHT;
       var src = offer.author.avatar;
