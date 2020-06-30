@@ -14,8 +14,6 @@
   mainPin.addEventListener('mousedown', function (evt) {
     evt.preventDefault();
     var HEIGHT_ADJUSTMENT = window.map.MainPinSize.HEIGHT + window.map.MainPinSize.TIP_HEIGHT;
-    window.map.activate();
-    window.map.enableAddressInput();
 
     if (window.utils.isLeftMouseButtonClicked(evt.which)) {
       var startCoords = {
@@ -52,6 +50,10 @@
 
         window.removeEventListener('mousemove', onMouseMove);
         window.removeEventListener('mouseup', onMouseUp);
+
+        
+    window.map.activate();    
+    window.map.enableAddressInput();
       };
 
       window.addEventListener('mousemove', onMouseMove);

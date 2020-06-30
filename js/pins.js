@@ -69,6 +69,7 @@
       return 'offer' in offer;
     });
     window.offers = filteredOffers;
+    renderPins(window.offers);
   };
 
   window.pins = {

@@ -63,7 +63,6 @@
     adForm.classList.add('ad-form--disabled');
     mapFiltersElement.setAttribute('disabled', '');
     map.classList.add('map--faded');
-    window.backend.load(window.successHandler, window.serverResponse.onError);
     disableAddressInput();
     window.pins.remove();
   };
@@ -71,6 +70,7 @@
   disableMap();
 
   var activateMap = function () {
+    window.backend.load(window.successHandler, window.serverResponse.onError);
     adForm.classList.remove('ad-form--disabled');
     enableNameFields(adFormInputs);
     enableNameFields(adFormSelects);
@@ -82,8 +82,7 @@
     buttonPublish.removeAttribute('disabled', '');
     descriptionTextarea.removeAttribute('disabled', '');
     mapFiltersElement.removeAttribute('disabled', '');
-    map.classList.remove('map--faded');
-    window.pins.render(window.offers);
+    map.classList.remove('map--faded');  
   };
 
   mapPinMain.addEventListener('keydown', function (evt) {
